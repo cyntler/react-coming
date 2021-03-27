@@ -4,7 +4,7 @@
  */
 import packageJson from '../../package.json';
 
-const { name, version } = packageJson;
+const { name } = packageJson;
 
 export const logError = (message: string) => {
   if (process.env.NODE_ENV !== 'development') {
