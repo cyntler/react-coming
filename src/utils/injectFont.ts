@@ -1,3 +1,7 @@
+/**
+ * @name react-coming
+ * @author cyntler <damian@cyntler.com>
+ */
 export const injectFont = () => {
   const link = document.createElement('link');
   link.href =
