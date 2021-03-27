@@ -11,5 +11,5 @@ export const logError = (message: string) => {
     return;
   }
 
-  console.error(`${name} v.${version}: ${message}`);
+  console.error(`${name}: ${message}`);
 };
