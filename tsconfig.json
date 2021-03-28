@@ -6,6 +6,5 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "resolveJsonModule": true
-  },
-  "exclude": ["./lib"]
+  }
 }

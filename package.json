@@ -1,6 +1,6 @@
 {
   "name": "react-coming",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.3",
   "description": "React component rendering a simple page with a countdown timer.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "concurrently \"webpack --watch\" \"tsc --watch\"",
-    "build": "rimraf ./lib && webpack",
+    "build": "rimraf ./lib && webpack -c ./webpack.config.production.js && tsc",
     "lint": "eslint ./ --ext=tsx,ts",
     "prettier": "prettier --check 'src/**/*.{ts,tsx}'",
     "test": "jest",
