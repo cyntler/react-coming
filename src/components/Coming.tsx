@@ -91,7 +91,7 @@ export const Coming: FunctionComponent<ComingProps> = ({
   const { days, hours, minutes, seconds } = values;
 
   return (
-    <Container>
+    <Container data-testid="coming-container">
       <List>
         <Item>
           <Value>{days}</Value>
@@ -115,6 +115,7 @@ export const Coming: FunctionComponent<ComingProps> = ({
 };
 
 Coming.defaultProps = {
+  children: null,
   disabled: false,
   toDate: undefined,
   toTime: '00:00',
