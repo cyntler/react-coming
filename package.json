@@ -1,6 +1,6 @@
 {
   "name": "react-coming",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.0",
   "description": "React component rendering a simple page with a countdown timer.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -31,6 +31,8 @@
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
+    "@testing-library/react": "^11.2.5",
+    "@types/jest": "^26.0.22",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
     "babel-loader": "^8.2.2",
