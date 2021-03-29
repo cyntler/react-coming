@@ -7,7 +7,7 @@ React component rendering a simple page with a countdown timer.
 
 ## Preview
 
-[](https://github.com/cyntler/react-coming/blob/main/preview.png?raw=true)
+![preview.png](https://raw.githubusercontent.com/cyntler/react-coming/main/preview.png)
 
 ## Installation
 
