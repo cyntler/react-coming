@@ -5,6 +5,10 @@
 
 React component rendering a simple page with a countdown timer.
 
+## Preview
+
+[](https://github.com/cyntler/react-coming/blob/main/preview.png?raw=true)
+
 ## Installation
 
 To install the hook you can use npm:
