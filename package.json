@@ -1,6 +1,6 @@
 {
   "name": "react-coming",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0",
   "description": "React component rendering a simple page with a countdown timer.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
