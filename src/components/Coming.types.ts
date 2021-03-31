@@ -6,7 +6,7 @@ import { ReactNode } from 'react';
 
 export interface ComingProps {
   children?: ReactNode;
-  disabled?: boolean;
+  enabled?: boolean;
   toDate?: string;
   toTime?: string;
   daysLabel?: string;

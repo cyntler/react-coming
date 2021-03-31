@@ -20,7 +20,7 @@ import { ComingProps, ComingValues } from './Coming.types';
 
 export const Coming: FunctionComponent<ComingProps> = ({
   children,
-  disabled,
+  enabled,
   toDate,
   toTime,
   daysLabel,
@@ -84,7 +84,7 @@ export const Coming: FunctionComponent<ComingProps> = ({
     }
   }, []);
 
-  if (!isRunning || disabled) {
+  if (!isRunning || !enabled) {
     return fallbackReturn;
   }
 
@@ -116,7 +116,7 @@ export const Coming: FunctionComponent<ComingProps> = ({
 
 Coming.defaultProps = {
   children: null,
-  disabled: false,
+  enabled: true,
   toDate: undefined,
   toTime: '00:00',
   daysLabel: 'days',

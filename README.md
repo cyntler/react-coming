@@ -9,6 +9,10 @@ React component rendering a simple page with a countdown timer.
 
 ![preview.png](https://raw.githubusercontent.com/cyntler/react-coming/main/preview.png)
 
+## Motivation
+
+Sometimes, when we are working on a website or web application, we want to do deploy and show something to our users as quickly as possible. The `react-coming` library allows you to quickly render a view with a future date countdown. You can set this component to be enabled and rendered only for the production build, for example.
+
 ## Installation
 
 To install the hook you can use npm:
@@ -25,4 +29,38 @@ yarn add react-coming
 
 ## Usage
 
-## Props
+All you need is simple import the component:
+
+```tsx
+import { Coming } from 'react-coming';
+```
+
+And render the component:
+
+```tsx
+import { render } from 'react-dom';
+import { Coming } from 'react-coming';
+
+render(
+  <Coming enabled={process.env.NODE_ENV === 'production'} toDate="YYYY-MM-DD">
+    <App />
+  </Coming>,
+  document.getElementById('app')
+);
+```
+
+**When the countdown is over (0 seconds left) then the `children` prop will be rendered.**
+
+Children will also be rendered if you give a wrong date format.
+
+## Available Props
+
+| Name         | Type    | Default value                                         |
+| ------------ | ------- | ----------------------------------------------------- |
+| enabled      | boolean | true                                                  |
+| toDate       | string  | current date + 3 months string in format "YYYY-MM-DD" |
+| toTime       | string  | 00:00                                                 |
+| daysLabel    | string  | days                                                  |
+| hoursLabel   | string  | hours                                                 |
+| minutesLabel | string  | minutes                                               |
+| secondsLabel | string  | seconds                                               |
