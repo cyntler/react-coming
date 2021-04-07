@@ -9,12 +9,6 @@ beforeEach(() => {
   cleanup();
 });
 
-test('should render empty Coming component', () => {
-  const { container } = render(<Coming />);
-
-  expect(container.textContent).toBe('');
-});
-
 test('should render Coming children when toDate will be past', () => {
   const { container } = render(<Coming toDate="2020-01-01">children</Coming>);
 

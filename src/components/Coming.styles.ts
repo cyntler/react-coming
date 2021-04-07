@@ -48,7 +48,6 @@ export const Value = styled.p`
   font-size: 32px;
   letter-spacing: 2px;
   font-family: 'Times New Roman';
-  min-height: 75px;
   margin: 0;
   text-align: center;
 `;

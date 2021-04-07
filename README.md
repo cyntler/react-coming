@@ -55,12 +55,12 @@ Children will also be rendered if you give a wrong date format.
 
 ## Available Props
 
-| Name         | Type    | Default value                                         |
-| ------------ | ------- | ----------------------------------------------------- |
-| enabled      | boolean | true                                                  |
-| toDate       | string  | current date + 3 months string in format "YYYY-MM-DD" |
-| toTime       | string  | 00:00                                                 |
-| daysLabel    | string  | days                                                  |
-| hoursLabel   | string  | hours                                                 |
-| minutesLabel | string  | minutes                                               |
-| secondsLabel | string  | seconds                                               |
+| Name         | Type    | Description                                                            | Default value           |
+| ------------ | ------- | ---------------------------------------------------------------------- | ----------------------- |
+| enabled      | boolean | Prop that indicates whether the Coming component should be rendered.   | true                    |
+| toDate       | string  | Date in the format `YYYY-MM-DD` to which the component will countdown. | Current date + 3 Months |
+| toTime       | string  | Time in `HH:MM` format to which the component will countdown.          | 00:00                   |
+| daysLabel    | string  | Label text for days.                                                   | days                    |
+| hoursLabel   | string  | Label text for hours.                                                  | hours                   |
+| minutesLabel | string  | Label text for minutes.                                                | minutes                 |
+| secondsLabel | string  | Label text for seconds.                                                | seconds                 |

@@ -12,6 +12,7 @@ import {
   useState,
 } from 'react';
 import { calculateValues } from '../utils/calculateValues';
+import { getDefaultDate } from '../utils/getDefaultDate';
 import { injectFont } from '../utils/injectFont';
 import { isValidDate } from '../utils/isValidDate';
 import { logError } from '../utils/logError';
@@ -42,10 +43,18 @@ export const Coming: FunctionComponent<ComingProps> = ({
     []
   );
 
-  const countdownDate = useMemo(
-    () => new Date(`${toDate}T${toTime}:00.000Z`),
-    []
-  );
+  const countdownDate = useMemo(() => {
+    const [year, month, day] = toDate.split('-');
+    const [hour, minute] = toTime.split(':');
+
+    return new Date(
+      parseInt(year, 10),
+      parseInt(month, 10) - 1,
+      parseInt(day, 10),
+      parseInt(hour, 10),
+      parseInt(minute, 10)
+    );
+  }, []);
 
   if (!isValidDate(countdownDate)) {
     logError('The passed date or time is invalid.');
@@ -117,7 +126,7 @@ export const Coming: FunctionComponent<ComingProps> = ({
 Coming.defaultProps = {
   children: null,
   enabled: true,
-  toDate: undefined,
+  toDate: getDefaultDate(3),
   toTime: '00:00',
   daysLabel: 'days',
   hoursLabel: 'hours',
