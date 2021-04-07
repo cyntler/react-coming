@@ -58,7 +58,7 @@ Children will also be rendered if you give a wrong date format.
 | Name         | Type    | Description                                                            | Default value           |
 | ------------ | ------- | ---------------------------------------------------------------------- | ----------------------- |
 | enabled      | boolean | Prop that indicates whether the Coming component should be rendered.   | true                    |
-| toDate       | string  | Date in the format `YYYY-MM-DD` to which the component will countdown. | Current date + 3 Months |
+| toDate       | string  | Date in the format `YYYY-MM-DD` to which the component will countdown. | Current date + 3 months |
 | toTime       | string  | Time in `HH:MM` format to which the component will countdown.          | 00:00                   |
 | daysLabel    | string  | Label text for days.                                                   | days                    |
 | hoursLabel   | string  | Label text for hours.                                                  | hours                   |
