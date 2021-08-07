@@ -3,8 +3,10 @@
  * @author cyntler <damian@cyntler.com>
  */
 import {
+  cloneElement,
   Fragment,
   FunctionComponent,
+  isValidElement,
   useCallback,
   useLayoutEffect,
   useMemo,
@@ -28,8 +30,10 @@ export const Coming: FunctionComponent<ComingProps> = ({
   hoursLabel,
   minutesLabel,
   secondsLabel,
+  customComponent,
 }) => {
   const intervalRef = useRef<NodeJS.Timeout>();
+  const [isAfterFirstCalculation, setIsAfterFirstCalculation] = useState(false);
   const [isRunning, setIsRunning] = useState(true);
   const [values, setValues] = useState<ComingValues>({
     days: 0,
@@ -82,12 +86,16 @@ export const Coming: FunctionComponent<ComingProps> = ({
         minutes,
         seconds,
       });
+      setIsAfterFirstCalculation(true);
     }
   }, []);
 
   useLayoutEffect(() => {
     if (countdownTime) {
-      injectFont();
+      if (!customComponent) {
+        injectFont();
+      }
+
       startCountdown();
       intervalRef.current = setInterval(startCountdown, 1000);
     }
@@ -98,6 +106,19 @@ export const Coming: FunctionComponent<ComingProps> = ({
   }
 
   const { days, hours, minutes, seconds } = values;
+
+  if (
+    customComponent &&
+    isValidElement(customComponent) &&
+    isAfterFirstCalculation
+  ) {
+    return cloneElement(customComponent, {
+      days,
+      hours,
+      minutes,
+      seconds,
+    });
+  }
 
   return (
     <Container data-testid="coming-container">

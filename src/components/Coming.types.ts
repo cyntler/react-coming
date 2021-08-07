@@ -13,6 +13,7 @@ export interface ComingProps {
   hoursLabel?: string;
   minutesLabel?: string;
   secondsLabel?: string;
+  customComponent?: ReactNode;
 }
 
 export interface ComingValues {
