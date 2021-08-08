@@ -57,19 +57,21 @@ test('should render Coming with a custom component', () => {
     </Coming>
   );
 
-  const splitTextContent = container.textContent.split(',');
-  const keyValuePair = splitTextContent.map((text) => {
-    const [key, value] = text.split(':');
-    return {
-      key,
-      value,
-    };
-  });
+  const keyValuePair = container.textContent
+    .split('; ')[1]
+    ?.split(',')
+    .map((text: string) => {
+      const [key, value] = text.split(':');
+      return {
+        key,
+        value,
+      };
+    });
 
   expect(container.textContent.includes('custom component')).toBeTruthy();
   keyValuePair.forEach(({ key, value }) => {
     expect(typeof key).toBe('string');
     expect(typeof value).toBe('string');
-    expect(parseInt(value, 10)).toBeGreaterThan(0);
+    expect(parseInt(value, 10)).toBeGreaterThanOrEqual(0);
   });
 });
