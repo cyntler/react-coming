@@ -2,7 +2,7 @@
  * @name react-coming
  * @author cyntler <damian@cyntler.com>
  */
-import { injectFont } from './injectFont';
+import { injectFont } from '../injectFont';
 
 test('font is not includes in haed before call the util function', () => {
   expect(document.head.innerHTML.includes('Merriweather')).toBeFalsy();
