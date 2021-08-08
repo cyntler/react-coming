@@ -51,16 +51,26 @@ render(
 
 **When the countdown is over (0 seconds left) then the `children` prop will be rendered.**
 
-Children will also be rendered if you give a wrong date format.
+> Children will also be rendered if you give a wrong date format.
+
+## Custom render component
+
+If you want, you can pass `customComponent` prop to the Coming component to render your own component instead of the default countdown page.
+
+Passed component will receive countdown data as props:
+`days`, `hours`, `minutes`, `seconds`.
+
+You can use the countdown data to display inside your own component.
 
 ## Available Props
 
-| Name         | Type    | Description                                                            | Default value           |
-| ------------ | ------- | ---------------------------------------------------------------------- | ----------------------- |
-| enabled      | boolean | Prop that indicates whether the Coming component should be rendered.   | true                    |
-| toDate       | string  | Date in the format `YYYY-MM-DD` to which the component will countdown. | Current date + 3 months |
-| toTime       | string  | Time in `HH:MM` format to which the component will countdown.          | 00:00                   |
-| daysLabel    | string  | Label text for days.                                                   | days                    |
-| hoursLabel   | string  | Label text for hours.                                                  | hours                   |
-| minutesLabel | string  | Label text for minutes.                                                | minutes                 |
-| secondsLabel | string  | Label text for seconds.                                                | seconds                 |
+| Name            | Type      | Description                                                            | Default value           |
+| --------------- | --------- | ---------------------------------------------------------------------- | ----------------------- |
+| enabled         | boolean   | Prop that indicates whether the Coming component should be rendered.   | true                    |
+| toDate          | string    | Date in the format `YYYY-MM-DD` to which the component will countdown. | Current date + 3 months |
+| toTime          | string    | Time in `HH:MM` format to which the component will countdown.          | 00:00                   |
+| daysLabel       | string    | Label text for days.                                                   | days                    |
+| hoursLabel      | string    | Label text for hours.                                                  | hours                   |
+| minutesLabel    | string    | Label text for minutes.                                                | minutes                 |
+| secondsLabel    | string    | Label text for seconds.                                                | seconds                 |
+| customComponent | ReactNode | Custom React node to render instead of default Coming countdown page   | -                       |
