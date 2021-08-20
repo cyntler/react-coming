@@ -1,7 +1,3 @@
-/**
- * @name react-coming
- * @author cyntler <damian@cyntler.com>
- */
 import { cleanup, render } from '@testing-library/react';
 import { FunctionComponent } from 'react';
 import { Coming } from '../Coming';

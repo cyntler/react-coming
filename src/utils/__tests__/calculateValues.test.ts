@@ -1,7 +1,3 @@
-/**
- * @name react-coming
- * @author cyntler <damian@cyntler.com>
- */
 import { calculateValues } from '../calculateValues';
 
 test('should return calculated values for 1000 ms', () => {

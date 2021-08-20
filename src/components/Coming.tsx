@@ -1,7 +1,3 @@
-/**
- * @name react-coming
- * @author cyntler <damian@cyntler.com>
- */
 import {
   cloneElement,
   Fragment,

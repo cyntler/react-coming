@@ -1,7 +1,3 @@
-/**
- * @name react-coming
- * @author cyntler <damian@cyntler.com>
- */
 import { ReactNode } from 'react';
 
 export interface ComingProps {

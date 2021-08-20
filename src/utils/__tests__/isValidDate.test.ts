@@ -1,7 +1,3 @@
-/**
- * @name react-coming
- * @author cyntler <damian@cyntler.com>
- */
 import { isValidDate } from '../isValidDate';
 
 test('date should be invalid', () => {

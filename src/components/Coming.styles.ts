@@ -1,7 +1,3 @@
-/**
- * @name react-coming
- * @author cyntler <damian@cyntler.com>
- */
 import styled from 'styled-components';
 
 export const Container = styled.main`

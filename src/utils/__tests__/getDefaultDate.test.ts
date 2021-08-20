@@ -1,7 +1,3 @@
-/**
- * @name react-coming
- * @author cyntler <damian@cyntler.com>
- */
 import { getDefaultDate } from '../getDefaultDate';
 
 test('default date should be valid for +3 months', () => {

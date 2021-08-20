@@ -1,7 +1,3 @@
-/**
- * @name react-coming
- * @author cyntler <damian@cyntler.com>
- */
 const calculateDaysValue = (distance: number) =>
   Math.floor(distance / (1000 * 60 * 60 * 24));
 
