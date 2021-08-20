@@ -1,6 +1,6 @@
 {
   "name": "react-coming",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React component rendering a simple page with a countdown timer.",
   "keywords": [
     "react",
