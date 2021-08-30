@@ -73,4 +73,4 @@ You can use the countdown data to display inside your own component.
 | hoursLabel      | string    | Label text for hours.                                                  | hours                   |
 | minutesLabel    | string    | Label text for minutes.                                                | minutes                 |
 | secondsLabel    | string    | Label text for seconds.                                                | seconds                 |
-| customComponent | ReactNode | Custom React node to render instead of default Coming countdown page   | -                       |
+| customComponent | React Component | Custom React component to render instead of default Coming countdown page   | -                       |
